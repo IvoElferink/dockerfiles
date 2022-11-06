@@ -1,16 +1,16 @@
 ---
-name: Alpine 3.14 Publish
+name: CentOS 7 Publish
 on:
   push:
     branches:
       - master
     paths:
-      - ".github/workflows/alpine-314-publish.yml"
-      - "alpine/3.14/**"
+      - ".github/workflows/centos-7-publish.yml"
+      - "centos/7/**"
 
 env:
-  DOCKERFILE_DIR: alpine/3.14
-  TAG: ivoelferink/alpine:3.14
+  DOCKERFILE_DIR: centos/7
+  TAG: ivoelferink/centos:7
 
 jobs:
   lint:

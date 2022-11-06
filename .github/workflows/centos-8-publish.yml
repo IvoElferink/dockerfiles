@@ -1,16 +1,16 @@
 ---
-name: Alpine 3.14 Publish
+name: CentOS 8 Publish
 on:
   push:
     branches:
       - master
     paths:
-      - ".github/workflows/alpine-314-publish.yml"
-      - "alpine/3.14/**"
+      - ".github/workflows/centos-8-publish.yml"
+      - "centos/8/**"
 
 env:
-  DOCKERFILE_DIR: alpine/3.14
-  TAG: ivoelferink/alpine:3.14
+  DOCKERFILE_DIR: centos/8
+  TAG: ivoelferink/centos:8
 
 jobs:
   lint:
@@ -64,6 +64,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ${{ env.DOCKERFILE_DIR }}
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.TAG }}

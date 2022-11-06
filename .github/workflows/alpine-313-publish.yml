@@ -3,7 +3,7 @@ name: Alpine 3.13 Publish
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - ".github/workflows/alpine-313-publish.yml"
       - "alpine/3.13/**"
